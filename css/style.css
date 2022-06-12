@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    font-family: 'Red Hat Display', sans-serif;
+    background-color: var(--color1);
+    position: relative;
+}
+
+/* Liens utiles */
+:root {
+    --color1: #e0e8ff;
+    --color2: #3829e0;
+    --color3: #f5f7ff;
+    --color4: #7280a7;
+    --color5: #1f2f56;
+    --color6: #746cea;
+}
+
+button {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* ---------- La partie main ---------- */
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+}
+
+.svg-desktop {
+    display: none;
+}
+
+/* ---------- Le container de la card ---------- */
+main .container-card {
+    width: 80%;
+    margin: 3em auto;
+    position: relative;
+    max-width: 300px;
+}
+
+/* ---------- La card ---------- */
+main .container-card .card {
+    background-color: var(--color3);
+    padding: 0 1.5em 2em 1.5em;
+    border-radius: 15px;
+}
+
+/* ---------- L'image au top de la card ---------- */
+main .container-card .card .img-card {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+main .container-card .card .img-card img {
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+}
+
+/* ---------- Le texte de la card ---------- */
+main .container-card .card .text-card {
+    text-align: center;
+    padding-top: 11em;
+}
+
+main .container-card .card .text-card h2 {
+    color: var(--color5);
+}
+
+main .container-card .card .text-card p {
+    font-size: 0.8em;
+    margin-top: 1em;
+    line-height: 1.5em;
+    color: var(--color4);
+}
+
+/* ---------- La boîte avec le prix ---------- */
+main .plan-card .price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 2em;
+    padding: 1em;
+    background-color: #ecf0ff;
+    border-radius: 15px;
+}
+
+main .plan-card .price .img-price {
+    width: 30%;
+}
+
+main .plan-card .price .text-price {
+    width: 55%;
+}
+
+main .plan-card .price .text-price h3 {
+    color: var(--color5);
+    font-size: 0.9em;
+}
+
+main .plan-card .price .text-price p {
+    color: var(--color4);
+    font-size: 0.8em;
+}
+
+main .plan-card .price .button-plan {
+    width: 25%;
+}
+
+main .plan-card .price .button-plan button {
+    border: none;
+    border-bottom: 1px solid var(--color2);
+    background-color: transparent;
+    color: var(--color2);
+    font-weight: 700;
+}
+
+main .plan-card .price .button-plan button:hover {
+    border-bottom: none;
+    color: var(--color6);
+}
+
+/* ---------- Le bouton pour payer ---------- */
+main .button-card {
+    margin-top: 1.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+main .button-card .payement {
+    font-family: 'Red Hat Display', sans-serif;
+    font-weight: 700;
+    border: 1px solid var(--color2);
+    background-color: var(--color2);
+    color: #fff;
+    padding: 1em 0;
+    border-radius: 15px;
+    box-shadow: 0 2px 10px var(--color2);
+}
+
+main .button-card .payement:hover {
+    border: 1px solid var(--color6);
+    background-color: var(--color6);
+    box-shadow: 0 2px 10px var(--color6);
+}
+
+main .button-card .cancel {
+    margin-top: 1.3em;
+    font-family: 'Red Hat Display', sans-serif;
+    font-weight: 700;
+    border: none;
+    background-color: transparent;
+    color: var(--color4);
+    width: max-content;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+main .button-card .cancel:hover {
+    color: var(--color5);
+}
+
+
+/* ---------- La signature ---------- */
+.attribution { 
+    font-size: 11px; 
+    text-align: center;
+    margin-top: 3em; 
+    padding-bottom: 2em;
+}
+
+.attribution a { 
+    color: #3e52a3; 
+}
+
+.attribution .moi { 
+    font-size: 1.2em; 
+    font-family: Abyss, sans-serif;
+    color: #69554F;
+}
+
+.attribution .moi a { 
+    color: #EE5225;
+}
+
+@media screen and (min-width: 992px){
+    .svg-desktop {
+        display: block;
+        width: 100%;
+        object-fit: cover;
+        z-index: 1;
+    }
+    
+    .svg-desktop img {
+        width: 100%;
+        height: 50vh;
+        object-fit: cover;
+        z-index: 1;
+    }
+
+    main {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 2;
+        margin-top: 6em;
+    }
+
+    main .container-card {
+        max-width: 350px;
+    }
+
+    main .container-card .card{
+        padding: 2em;
+    }
+
+}
