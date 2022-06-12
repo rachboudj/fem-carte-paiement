@@ -181,7 +181,6 @@ main .button-card .cancel:hover {
 .attribution { 
     font-size: 11px; 
     text-align: center;
-    margin-top: 3em; 
     padding-bottom: 2em;
 }
 
@@ -219,11 +218,15 @@ main .button-card .cancel:hover {
         top: 0;
         width: 100%;
         z-index: 2;
-        margin-top: 6em;
+        /* margin-top: 10em; */
+        background-image: url(/images/pattern-background-desktop.svg);
+        background-size: 100%;
+        background-repeat: no-repeat;
     }
 
     main .container-card {
         max-width: 350px;
+        margin-top: 12em;
     }
 
     main .container-card .card{
