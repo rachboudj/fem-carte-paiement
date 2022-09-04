@@ -1,5 +1,7 @@
+/* importation de la font a utilisé pour l'intégration de la maquette */
 @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
 
+/* reset css pour éviter les marges intérieur/extérieur déja défini */
 * {
     margin: 0;
     padding: 0;
@@ -10,10 +12,10 @@ body {
     width: 100%;
     font-family: 'Red Hat Display', sans-serif;
     background-color: var(--color1);
-    position: relative;
+    /* position: relative; */
 }
 
-/* Liens utiles */
+/* Variables pour définir toutes les couleurs à utiliser */
 :root {
     --color1: #e0e8ff;
     --color2: #3829e0;
@@ -34,6 +36,7 @@ a {
 
 
 /* ---------- La partie main ---------- */
+/* Partie 'main' centré */
 main {
     display: flex;
     flex-direction: column;
@@ -50,11 +53,13 @@ main .container-card {
     width: 80%;
     margin: 3em auto;
     position: relative;
+    /* largeur maximale de 300 pixels pour la carte pour faciliter le responsive */
     max-width: 300px;
 }
 
 /* ---------- La card ---------- */
 main .container-card .card {
+    /* appel de la variable 'color3' */
     background-color: var(--color3);
     padding: 0 1.5em 2em 1.5em;
     border-radius: 15px;
@@ -198,6 +203,7 @@ main .button-card .cancel:hover {
     color: #EE5225;
 }
 
+/* Responsive ordinateur qui entre en vigueur à partir des écrans faisant 992px */
 @media screen and (min-width: 992px){
     .svg-desktop {
         display: block;
